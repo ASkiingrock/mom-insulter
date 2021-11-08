@@ -68,7 +68,7 @@ stupid = Trait("stupid")
 ugly = Trait("ugly")
 
 mom = YourMom('al', 0, 2, 10, 40, 1)
-print("\n")
+
 mom.insult()
 print("\n")
 mom.fact()
