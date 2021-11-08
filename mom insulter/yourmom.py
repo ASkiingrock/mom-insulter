@@ -58,7 +58,7 @@ class YourMom:
                 f"Yo mama has an iq of {self.iq}, which is fairly below the average of 100 and classifies her as "
                 f"mentally impaired.")
         if self.attractiveness < 5:
-            print("tbd")
+            print(f"Yo mama is a {self.attractiveness} out of 10. She ugly.")
 
 
 old = Trait("old")
