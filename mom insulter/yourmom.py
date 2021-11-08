@@ -35,15 +35,15 @@ class YourMom:
             insults = json.load(f)
 
         if old in self.traits:
-            print("Yo mama so old,", random.choice(insults["old"]), "\n")
+            print("Yo mama so old,", random.choice(insults["old"]))
         if short in self.traits:
-            print("Yo mama so short,", random.choice(insults["short"]), "\n")
+            print("Yo mama so short,", random.choice(insults["short"]))
         if fat in self.traits:
-            print("Yo mama so fat,", random.choice(insults["fat"]), "\n")
+            print("Yo mama so fat,", random.choice(insults["fat"]))
         if stupid in self.traits:
-            print("Yo mama so stupid,", random.choice(insults["stupid"]), "\n")
+            print("Yo mama so stupid,", random.choice(insults["stupid"]))
         if ugly in self.traits:
-            print("Yo mama so ugly,", random.choice(insults["ugly"]), "\n")
+            print("Yo mama so ugly,", random.choice(insults["ugly"]))
 
     def fact(self):
         bmi = self.weight_kg / (self.height_m ** 2)
@@ -71,3 +71,4 @@ mom = YourMom('al', 0, 2, 10, 40, 1)
 print("\n")
 mom.insult()
 print("\n")
+mom.fact()
