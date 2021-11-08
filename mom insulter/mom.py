@@ -59,9 +59,15 @@ class Mum:
         if self.bmi > 25:
             print(f"Yo mama has a bmi of {self.bmi:.2f}, which classifies her as overweight or obese.")
         if self.iq < 85:
-            print(
-                f"Yo mama has an iq of {self.iq}, which is fairly below the average of 100 and classifies her as "
-                f"mentally impaired.")
+            if self.iq < 50:
+                print(f"Yo mama has an iq of {self.iq}, which is highly below the average of 100 and classifies her "
+                      f"as mentally impaired.")
+            elif self.iq < 15:
+                print(f"Yo mama has an iq of {self.iq}, which is extremely below the average of 100 and classifies "
+                      f"her as mentally impaired.")
+            else:
+                print(f"Yo mama has an iq of {self.iq}, which is fairly below the average of 100 and classifies her "
+                      f"as mentally impaired.")
         if self.attractiveness < 5:
             print(f"Yo mama is a {self.attractiveness} out of 10. She ugly.")
 
@@ -73,7 +79,11 @@ fat = Trait("fat")
 stupid = Trait("stupid")
 ugly = Trait("ugly")
 
-mom = Mum('Stinky', 63, 49, 7000000, -12, 3)  # Mum test
+# Load test mum
+with open("test_mum.json", "r") as f:
+    test_mum = json.load(f)
+mom = Mum(test_mum["name"], test_mum["age"], test_mum["height_m"], test_mum["weight_kg"], test_mum["iq"],
+          test_mum["attractiveness"])
 
 # Testing funcs
 mom.insult()
