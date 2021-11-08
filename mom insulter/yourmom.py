@@ -9,13 +9,13 @@ class Trait:
 
 
 class YourMom:
-    def __init__(self, name, age, height_m, weight_kg, iq, outof10):
+    def __init__(self, name, age, height_m, weight_kg, iq, attractiveness):
         self.name = name
         self.age = age
         self.height_m = height_m
         self.weight_kg = weight_kg
         self.iq = iq
-        self.outof10 = outof10
+        self.attractiveness = attractiveness
 
         self.traits = []
         if self.age > 60:
@@ -27,7 +27,7 @@ class YourMom:
             self.traits.append(fat)
         if self.iq < 85:
             self.traits.append(stupid)
-        if self.outof10 < 5:
+        if self.attractiveness < 5:
             self.traits.append(ugly)
 
     def insult(self):
@@ -45,9 +45,8 @@ class YourMom:
         if ugly in self.traits:
             print("Yo mama so ugly,", random.choice(insults["ugly"]), "\n")
 
-
     def fact(self):
-        bmi = self.weightkg / (self.heightm ** 2)
+        bmi = self.weight_kg / (self.height_m ** 2)
         if self.age > 60:
             print(f'Yo mama is {self.age}, which is over 60, therefore: she old.')
         if self.height_m < 1.55:
@@ -58,7 +57,7 @@ class YourMom:
             print(
                 f"Yo mama has an iq of {self.iq}, which is fairly below the average of 100 and classifies her as "
                 f"mentally impaired.")
-        if self.outof10 < 5:
+        if self.attractiveness < 5:
             print("tbd")
 
 
