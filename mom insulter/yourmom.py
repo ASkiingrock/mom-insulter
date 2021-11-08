@@ -9,12 +9,13 @@ class Trait:
 
 
 class YourMom:
-    def __init__(self, name, age, height_m, weight_kg, iq):
+    def __init__(self, name, age, height_m, weight_kg, iq, outof10):
         self.name = name
         self.age = age
         self.height_m = height_m
         self.weight_kg = weight_kg
         self.iq = iq
+        self.outof10 = outof10
 
         self.traits = []
         if self.age > 60:
@@ -26,6 +27,8 @@ class YourMom:
             self.traits.append(fat)
         if self.iq < 85:
             self.traits.append(stupid)
+        if self.outof10 < 5:
+            self.traits.append(ugly)
 
     def insult(self):
         with open("insults.json", "r") as f:
@@ -39,6 +42,9 @@ class YourMom:
             print("Yo mama so fat,", random.choice(insults["fat"]), "\n")
         if stupid in self.traits:
             print("Yo mama so stupid,", random.choice(insults["stupid"]), "\n")
+        if ugly in self.traits:
+            print("Yo mama so ugly,", random.choice(insults["ugly"]), "\n")
+
 
     def fact(self):
         bmi = self.weightkg / (self.heightm ** 2)
@@ -52,14 +58,17 @@ class YourMom:
             print(
                 f"Yo mama has an iq of {self.iq}, which is fairly below the average of 100 and classifies her as "
                 f"mentally impaired.")
+        if self.outof10 < 5:
+            print("tbd")
 
 
 old = Trait("old")
 short = Trait("short")
 fat = Trait("fat")
 stupid = Trait("stupid")
+ugly = Trait("ugly")
 
-mom = YourMom('al', 80, 1.59, 10000, 60)
+mom = YourMom('al', 0, 2, 10, 40, 1)
 print("\n")
 mom.insult()
 print("\n")
