@@ -9,7 +9,7 @@ class your_mom:
         self.weightkg = weightkg
         self.iq = iq
     def insult(self):
-        with open("/Users/owensmith/Documents/VS Code/mom insulter/yourmom.json", "r") as f:
+        with open("yourmom.json", "r") as f:
             yourmom = json.load(f)
         #change random.chocie
         bmi = self.weightkg/(self.heightm**2)
