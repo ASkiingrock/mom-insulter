@@ -34,10 +34,11 @@ class Mum:
             self.traits.append(ugly)
 
     # Insult function, pretty self-explanatory
-    def insult(self):
+    # Start with name to give context for who it is, maybe print stats?
+    def Insult(self):
         with open("insults.json", "r") as file:  # Load insults json file
             insults = json.load(file)
-
+        print(f'Yo mama\'s name is {self.name}')
         # Make random joke based on what traits are present
         if old in self.traits:
             print("Yo mama so old,", random.choice(insults["old"]))
@@ -51,7 +52,8 @@ class Mum:
             print("Yo mama so ugly,", random.choice(insults["ugly"]))
 
     # Fact function, not sure why this exists but Owen made it
-    def fact(self):
+    # Gotta explain why she is getting roasted so hard OSCAR
+    def Fact(self):
         if self.age > 60:
             print(f'Yo mama is {self.age}, which is over 60, therefore: she old.')
         if self.height_m < 1.55:
@@ -60,14 +62,15 @@ class Mum:
             print(f"Yo mama has a bmi of {self.bmi:.2f}, which classifies her as overweight or obese.")
         if self.iq < 85:
             if self.iq < 50:
-                print(f"Yo mama has an iq of {self.iq}, which is highly below the average of 100 and classifies her "
-                      f"as mentally impaired.")
-            elif self.iq < 15:
                 print(f"Yo mama has an iq of {self.iq}, which is extremely below the average of 100 and classifies "
                       f"her as mentally impaired.")
+            elif self.iq < 70:
+                print(f"Yo mama has an iq of {self.iq}, which is highly below the average of 100 and classifies her "
+                      f"as mentally impaired.")
             else:
                 print(f"Yo mama has an iq of {self.iq}, which is fairly below the average of 100 and classifies her "
                       f"as mentally impaired.")
+                
         if self.attractiveness < 5:
             print(f"Yo mama is a {self.attractiveness} out of 10. She ugly.")
 
