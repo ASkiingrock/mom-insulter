@@ -35,8 +35,8 @@ class Mum:
 
     # Insult function, pretty self-explanatory
     def insult(self):
-        with open("insults.json", "r") as f:  # Load insults json file
-            insults = json.load(f)
+        with open("insults.json", "r") as file:  # Load insults json file
+            insults = json.load(file)
 
         # Make random joke based on what traits are present
         if old in self.traits:
@@ -72,20 +72,8 @@ class Mum:
             print(f"Yo mama is a {self.attractiveness} out of 10. She ugly.")
 
 
-# Testing features
 old = Trait("old")
 short = Trait("short")
 fat = Trait("fat")
 stupid = Trait("stupid")
 ugly = Trait("ugly")
-
-# Load test mum
-with open("test_mum.json", "r") as f:
-    test_mum = json.load(f)
-mom = Mum(test_mum["name"], test_mum["age"], test_mum["height_m"], test_mum["weight_kg"], test_mum["iq"],
-          test_mum["attractiveness"])
-
-# Testing funcs
-mom.insult()
-print("\n")
-mom.fact()
