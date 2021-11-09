@@ -22,11 +22,13 @@ for line in lines:
 
         # Attempt to add joke to category, makes category if it doesn't exist
         try:
-            for old_joke in insults[category]:
-                if f"Yo mama so {category}, {punchline}" != old_joke:  # Checks if joke already exists
+            for old_punchline in insults[category]:
+                if punchline != old_punchline:  # Checks if joke already exists
                     insults[category].append(punchline)
         except KeyError:
             insults[category] = [punchline]
+            print(insults)
+
 
 with open("test.json", "w") as file:
     json.dump(insults, file, indent=4)
