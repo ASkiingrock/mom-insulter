@@ -25,12 +25,17 @@ for item in sentences:
         a = str(say_split).partition(',')
         category = a[0]
         insult = a[2]
+        full_split = item.split("Yo mama so ")
+        full_split_2 = full_split[1].split(", ")
         # this does work yet
         with open("test.json", "r", encoding="utf-8") as file:
             yo_mama_jokes = json.load(file)
         if category.lower() in "olddumbtallshortrichpoorother":
-            yo_mama_jokes[category.lower()].append(insult)
+            yo_mama_jokes[category.lower()].append(insult[1:])
         else:
-            yo_mama_jokes["other"].append(a)
+            try:
+                yo_mama_jokes["other"][full_split_2[0]] = full_split_2[1]
+            except IndexError:
+                print("there was 1 sussy error ..... it's probably fine")
         with open("test.json", "w", encoding="utf-8") as file:
             json.dump(yo_mama_jokes, file, indent=4)
