@@ -6,8 +6,16 @@
 
 import re
 import json
-with open ("test.json", "r") as file:
-    yomamas = json.load(file)
+with open ("yo_mama_analyser_output.json", "r") as file:
+    yomamas = json.load(file).get("scarymommy.com")
+
+old = []
+dumb = []
+tall = []
+short = []
+rich = []
+poor = []
+other = []
 
 #split into sentences
 yomamas = str(yomamas)
@@ -24,13 +32,37 @@ for item in sentences:
         a = str(saysplit).partition(',')
         category = a[0]
         insult = a[2]
-#this doesn't work yet
-        with open ("test.json", "r") as file:
-            yomamas = json.load(file)
-            if category.lower() in "olddumbtallshortrichpoorother":
-                json.update({(category.lower()):insult})
-            else:
-                json.update({"other":a})
+#this works, although it adds some weird characters to the json if you run it, so ill iron that out later
+        match category:
+            case "old":
+                old.append(insult)
+            case "dumb":
+                dumb.append(insult)
+            case "tall":
+                tall.append(insult)
+            case "short":
+                short.append(insult)
+            case "rich":
+                rich.append(insult)
+            case "poor":
+                poor.append(insult)
+            case _:
+                other.append(insult)
+with open ("yo_mama_analyser_output.json", "r") as file:
+    json_object = json.load(file)
+
+json_object["old"] = (old)
+json_object["dumb"] = (dumb)
+json_object["tall"] = (tall)
+json_object["short"] = (short)
+json_object["rich"] = (rich)
+json_object["poor"] = (poor)
+json_object["other"] = (other)
+
+with open("yo_mama_analyser_output.json", "w") as file:
+    json.dump(json_object, file)
+    file.close()
+
 
         
         
