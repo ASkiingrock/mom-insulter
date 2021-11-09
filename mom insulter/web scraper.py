@@ -7,7 +7,7 @@
 import re
 import json
 
-with open("test.json", "r") as file:
+with open("test.json", "r", encoding="utf-8") as file:
     yo_mama_jokes = json.load(file)
 
 # split into sentences
@@ -25,10 +25,12 @@ for item in sentences:
         a = str(say_split).partition(',')
         category = a[0]
         insult = a[2]
-        # this doesn't work yet
-        with open("test.json", "r") as file:
+        # this does work yet
+        with open("test.json", "r", encoding="utf-8") as file:
             yo_mama_jokes = json.load(file)
-            if category.lower() in "olddumbtallshortrichpoorother":
-                json.update({(category.lower()): insult})
-            else:
-                json.update({"other": a})
+        if category.lower() in "olddumbtallshortrichpoorother":
+            yo_mama_jokes[category.lower()].append(insult)
+        else:
+            yo_mama_jokes["other"].append(a)
+        with open("test.json", "w", encoding="utf-8") as file:
+            json.dump(yo_mama_jokes, file, indent=4)
