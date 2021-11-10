@@ -24,14 +24,14 @@ trouble to share with you the inner workings.
 -   Third, it tells you a very insulting fact about your mother
 
 FAQ  
-**Code licence  
-**This highly intelligent code is licenced under CC BY-NC-ND 4.0, we hope you
+**Code licence** 
+This highly intelligent code is licenced under CC BY-NC-ND 4.0, we hope you
 understand that such prestigious code is valuable.  
-**How can I use this in my own projects?  
-**The *Mum* class has two methods, *insult()* and *fact()*. You can imagine what
-these are, I doubt further explanation is required.  
-**Will you be selling this product?  
-**Currently, this is under discussion. We believe that releasing a product like
+**How can I use this in my own projects?**
+The *Mum* class has two methods, *insult()* and *fact()*. You can imagine what
+these are, I doubt further explanation is required.
+**Will you be selling this product?**
+Currently, this is under discussion. We believe that releasing a product like
 this for a monetary price would ultimately crash the global economy and we can’t
-live with the guilt of that.**  
-**
+live with the guilt of that.
+
