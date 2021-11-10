@@ -35,7 +35,7 @@ class Mum:
 
     # Insult function, pretty self-explanatory
     # Start with name to give context for who it is, maybe print stats?
-    def Insult(self):
+    def insult(self):
         with open("insults.json", "r") as file:  # Load insults json file
             insults = json.load(file)
         print(f'Yo mama\'s name is {self.name}')
@@ -53,7 +53,7 @@ class Mum:
 
     # Fact function, not sure why this exists but Owen made it
     # Gotta explain why she is getting roasted so hard OSCAR
-    def Fact(self):
+    def fact(self):
         if self.age > 60:
             print(f'Yo mama is {self.age}, which is over 60, therefore: she old.')
         if self.height_m < 1.55:
