@@ -16,7 +16,7 @@ for line in lines:
         category = split_joke[0].lower()  # e.g. fat, ugly, old, short
         punchline = split_joke[1].strip()  # What comes after the above
 
-        with open("test.json", "r", encoding="utf-8") as file:
+        with open("joke_reader_output.json", "r", encoding="utf-8") as file:
             insults = json.load(file)
             file.close()
 
@@ -30,6 +30,6 @@ for line in lines:
             print(insults)
 
 
-with open("test.json", "w") as file:
+with open("joke_reader_output.json", "w") as file:
     json.dump(insults, file, indent=4)
     file.close()
