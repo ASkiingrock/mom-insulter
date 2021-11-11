@@ -25,7 +25,7 @@ for line in lines:
             for old_punchline in insults[category]:
                 if punchline not in insults[category]:  # Checks if joke already exists
                     insults[category].append(punchline)
-        
+
         # This didn't work because the json dump was outside of the loop so it never saved
         # Works now
         except KeyError:
@@ -36,7 +36,8 @@ for line in lines:
             json.dump(insults, file, indent=4, ensure_ascii=False)
             file.close()
 
-#find all categories
+
+# find all categories
 def keys():
     with open("mom insulter/joke-reading/joke_reader_output.json", "r", encoding="utf-8") as file:
         categories = json.load(file)
