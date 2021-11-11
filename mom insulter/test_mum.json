@@ -4,5 +4,7 @@
   "height_m": 155,
   "weight_kg": 100,
   "iq": 80,
-  "attractiveness": 5
+  "attractiveness": 5,
+  "scariness": 8,
+  "nationality": "American"
 }

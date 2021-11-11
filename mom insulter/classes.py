@@ -11,13 +11,16 @@ class Trait:
 # Mum class, contains all the properties of a mother you could make hilarious jokes about
 # Will need to add to in future
 class Mum:
-    def __init__(self, name, age, height_m, weight_kg, iq, attractiveness):
+    def __init__(self, name, age, height_m, weight_kg, iq, attractiveness, scariness, nationality):
         self.name = name  # Name
         self.age = age  # Age
         self.height_m = height_m  # Height in metres
         self.weight_kg = weight_kg  # Weight in kilograms
         self.iq = iq  # IQ
         self.attractiveness = attractiveness  # Attractiveness out of 10
+        self.scariness = scariness  # Scariness out of 10
+        self.nationality = nationality  # Nationality
+
         self.bmi = self.weight_kg / (self.height_m ** 2)  # BMI score
 
         self.traits = []  # Traits, e.g. "short", "ugly"
@@ -33,11 +36,15 @@ class Mum:
             self.traits.append(stupid)
         if self.attractiveness < 5:
             self.traits.append(ugly)
+        if self.scariness > 6:
+            self.traits.append(scary)
+        if self.nationality.lower() in ["american", "united states", "united states of america", "usa", "us"]:
+            self.traits.append(american)
 
     # Insult function, pretty self-explanatory
     # Start with name to give context for who it is, maybe print stats?
     def insult(self):
-        with open("insults.json", "r") as file:  # Load insults json file
+        with open("insults.json", "r", encoding="utf-8") as file:  # Load insults json file
             insults = json.load(file)
         print(f'Yo mama\'s name is {self.name}')
         # Make random joke based on what traits are present
@@ -51,9 +58,14 @@ class Mum:
             print("Yo mama so stupid,", random.choice(insults["stupid"]))
         if ugly in self.traits:
             print("Yo mama so ugly,", random.choice(insults["ugly"]))
+        if scary in self.traits:
+            print("Yo mama so scary,", random.choice(insults["scary"]))
+        if american in self.traits:
+            print("Yo mama so American,", random.choice(insults["american"]))
 
     # Fact function, not sure why this exists but Owen made it
     # Gotta explain why she is getting roasted so hard OSCAR
+    # You know what? Makes sense
     def fact(self):
         if self.age > 60:
             print(f'Yo mama is {self.age}, which is over 60, therefore: she old.')
@@ -81,3 +93,5 @@ short = Trait("short")
 fat = Trait("fat")
 stupid = Trait("stupid")
 ugly = Trait("ugly")
+scary = Trait("scary")
+american = Trait("american")
