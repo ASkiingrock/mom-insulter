@@ -9,6 +9,7 @@ class Trait:
 
 
 # Mum class, contains all the properties of a mother you could make hilarious jokes about
+# Will need to add to in future
 class Mum:
     def __init__(self, name, age, height_m, weight_kg, iq, attractiveness):
         self.name = name  # Name

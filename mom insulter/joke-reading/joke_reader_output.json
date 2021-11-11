@@ -1,4 +1,5 @@
 {
+    "init": "init",
     "old": [
         "she walked out of a museum and the alarm went off.",
         "she was a waitress at The Last Supper.",
@@ -44,8 +45,8 @@
         "she thought a quarterback was a refund."
     ],
     "literal": [
-        "she stared at a cup of orange juice for 12 hours because it said, \u201cconcentrate.\u201d",
-        "when I said, \u201cDrinks on the house,\u201d she got a ladder.",
+        "she stared at a cup of orange juice for 12 hours because it said, “concentrate.”",
+        "when I said, “Drinks on the house,” she got a ladder.",
         "that when I told her she lost her mind, she went looking for it."
     ],
     "strict": [
@@ -59,7 +60,7 @@
         "I saw her in a tree talking about how she was the branch manager.",
         "she thought Dunkin' Donuts was a basketball team.",
         "she told the NFL players to bring spoons to the Superbowl.",
-        "when thieves broke in and stole the tv, she ran outside and yelled at them, \u201cHey, you forgot the remote!\u201d",
+        "when thieves broke in and stole the tv, she ran outside and yelled at them, “Hey, you forgot the remote!”",
         "she put a watch in a piggybank and said she was saving time."
     ],
     "yellow-teethed": [
@@ -100,10 +101,10 @@
         "she came in last place in a recent snail marathon."
     ],
     "hot": [
-        "she makes jalape\u00f1os cry."
+        "she makes jalapeños cry."
     ],
     "bad at directions": [
-        "when she saw the \u201cDisneyland left\u201d sign, she went home."
+        "when she saw the “Disneyland left” sign, she went home."
     ],
     "short": [
         "she has to slam dunk her bus fare.",
@@ -135,7 +136,7 @@
     ],
     "hungry": [
         "she created a Gmail account just so she could get the spam.",
-        "when she went to KFC and the cashier asked what size bucket she wanted, she said, \u201cThe one on the roof!\u201d"
+        "when she went to KFC and the cashier asked what size bucket she wanted, she said, “The one on the roof!”"
     ],
     "confusing": [
         "even Scooby-Doo couldn't solve that mystery."
@@ -151,17 +152,17 @@
         "when she walked past the TV, I missed three episodes."
     ],
     "tacky": [
-        "when she tried to join a tacky contest they said, \u201cSorry, no professionals.\u201d"
+        "when she tried to join a tacky contest they said, “Sorry, no professionals.”"
     ],
     "cold": [
         "she gives everyone around her frostbite."
     ],
     "dim": [
-        "she held a battery up and said, \u201cI got the power!\u201d"
+        "she held a battery up and said, “I got the power!”"
     ],
     "clueless": [
         "she climbed over a glass wall to see what was on the other side.",
-        "when the judge said, \u201cOrder in the court,\u201d she asked for fries and a shake.",
+        "when the judge said, “Order in the court,” she asked for fries and a shake.",
         "she went to the optometrist to get an iPhone.",
         "she brought a spoon to the Super Bowl."
     ],
@@ -169,7 +170,7 @@
         "she's a Marxist utopia."
     ],
     "bad with directions": [
-        "she saw a \u201cDisneyland left\u201d sign on the way to the theme park, so she went home."
+        "she saw a “Disneyland left” sign on the way to the theme park, so she went home."
     ],
     "hairy": [
         "when she went to see the new Star Wars movie, everyone thought Chewbacca was making a promotional appearance."
@@ -178,7 +179,7 @@
         "she'd give me the hair off her back."
     ],
     "fine": [
-        "we call her \u201cStacey's mom.\u201d"
+        "we call her “Stacey's mom.”"
     ],
     "stern": [
         "they don't give her Happy Meals at McDonald's."

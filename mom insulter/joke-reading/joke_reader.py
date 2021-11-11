@@ -33,7 +33,7 @@ for line in lines:
             insults[category].append(punchline)
 
         with open("mom insulter/joke-reading/joke_reader_output.json", "w", encoding="utf-8") as file:
-            json.dump(insults, file, indent=4)
+            json.dump(insults, file, indent=4, ensure_ascii=False)
             file.close()
 
 #find all categories
