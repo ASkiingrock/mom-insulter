@@ -8,6 +8,6 @@ mom = classes.Mum(test_mum["name"], test_mum["age"], test_mum["height_m"], test_
                   test_mum["attractiveness"])
 
 # Testing funcs
-f.insult()
+mom.insult()
 print("\n")
 mom.fact()
