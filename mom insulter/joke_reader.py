@@ -25,7 +25,6 @@ for line in lines:
             for old_punchline in insults[category]:
                 if punchline not in insults[category]:  # Checks if joke already exists
                     insults[category].append(punchline)
-            print('old')
         
         # This didn't work because the json dump was outside of the loop so it never saved
         # Works now
@@ -33,6 +32,6 @@ for line in lines:
             insults[category] = []
             insults[category].append(punchline)
 
-        with open("mom insulter/joke_reader_output.json", "w") as file:
+        with open("mom insulter/joke_reader_output.json", "w", encoding="utf-8") as file:
             json.dump(insults, file, indent=4)
             file.close()
