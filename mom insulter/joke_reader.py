@@ -21,13 +21,12 @@ for line in lines:
             file.close()
 
         # Attempt to add joke to category, makes category if it doesn't exist
-        try:
+        if category in insults.keys():
             for old_punchline in insults[category]:
                 if punchline != old_punchline:  # Checks if joke already exists
                     insults[category].append(punchline)
-        except KeyError:
+        else:
             insults[category] = [punchline]
-            print(insults)
 
 
 with open("joke_reader_output.json", "w") as file:
