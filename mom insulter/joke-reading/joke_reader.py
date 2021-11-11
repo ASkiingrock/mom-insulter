@@ -15,7 +15,7 @@ for line in lines:
         category = split_joke[0].lower()  # e.g. fat, ugly, old, short
         punchline = split_joke[1].strip()  # What comes after the above
 
-        with open("joke_reader_output.json", "r", encoding="utf-8") as file:
+        with open("../insults.json", "r", encoding="utf-8") as file:
             insults = json.load(file)
             file.close()
 
@@ -31,14 +31,14 @@ for line in lines:
             insults[category] = []
             insults[category].append(punchline)
 
-        with open("joke_reader_output.json", "w", encoding="utf-8") as file:
+        with open("../insults.json", "w", encoding="utf-8") as file:
             json.dump(insults, file, indent=4, ensure_ascii=False)
             file.close()
 
 
 # find all categories
 def keys():
-    with open("joke_reader_output.json", "r", encoding="utf-8") as file:
+    with open("../insults.json", "r", encoding="utf-8") as file:
         categories = json.load(file)
         print(categories.keys())
         categories.close()
