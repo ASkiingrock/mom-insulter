@@ -1,7 +1,7 @@
 import json
 
 # Read the jokes from the raw jokes file. Gets each line as a list
-with open("mom insulter/raw_jokes.txt", "r", encoding="utf-8") as file:
+with open("mom insulter/joke-reading/raw_jokes.txt", "r", encoding="utf-8") as file:
     lines = file.readlines()
     file.close()
 
@@ -16,7 +16,7 @@ for line in lines:
         category = split_joke[0].lower()  # e.g. fat, ugly, old, short
         punchline = split_joke[1].strip()  # What comes after the above
 
-        with open("mom insulter/joke_reader_output.json", "r", encoding="utf-8") as file:
+        with open("mom insulter/joke-reading/joke_reader_output.json", "r", encoding="utf-8") as file:
             insults = json.load(file)
             file.close()
 
@@ -32,6 +32,12 @@ for line in lines:
             insults[category] = []
             insults[category].append(punchline)
 
-        with open("mom insulter/joke_reader_output.json", "w", encoding="utf-8") as file:
+        with open("mom insulter/joke-reading/joke_reader_output.json", "w", encoding="utf-8") as file:
             json.dump(insults, file, indent=4)
             file.close()
+
+def keys():
+    with open("mom insulter/joke-reading/joke_reader_output.json", "r", encoding="utf-8") as file:
+        categories = json.load(file)
+        print(categories.keys())
+        categories.close()
