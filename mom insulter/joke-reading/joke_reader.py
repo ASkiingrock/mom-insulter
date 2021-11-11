@@ -31,14 +31,14 @@ for line in lines:
             insults[category] = []
             insults[category].append(punchline)
 
-        with open("mom insulter/joke-reading/joke_reader_output.json", "w", encoding="utf-8") as file:
+        with open("joke_reader_output.json", "w", encoding="utf-8") as file:
             json.dump(insults, file, indent=4, ensure_ascii=False)
             file.close()
 
 
 # find all categories
 def keys():
-    with open("mom insulter/joke-reading/joke_reader_output.json", "r", encoding="utf-8") as file:
+    with open("joke_reader_output.json", "r", encoding="utf-8") as file:
         categories = json.load(file)
         print(categories.keys())
         categories.close()
