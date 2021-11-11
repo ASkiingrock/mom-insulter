@@ -1,7 +1,7 @@
 import json
 
 # Read the jokes from the raw jokes file. Gets each line as a list
-with open("raw_jokes.txt", "r", encoding="utf-8") as file:
+with open("mom insulter/raw_jokes.txt", "r", encoding="utf-8") as file:
     lines = file.readlines()
     file.close()
 
@@ -16,20 +16,23 @@ for line in lines:
         category = split_joke[0].lower()  # e.g. fat, ugly, old, short
         punchline = split_joke[1].strip()  # What comes after the above
 
-        with open("joke_reader_output.json", "r", encoding="utf-8") as file:
+        with open("mom insulter/joke_reader_output.json", "r", encoding="utf-8") as file:
             insults = json.load(file)
             file.close()
 
         # Attempt to add joke to category, makes category if it doesn't exist
         try:
             for old_punchline in insults[category]:
-                if punchline != old_punchline:  # Checks if joke already exists
+                if punchline not in insults[category]:  # Checks if joke already exists
                     insults[category].append(punchline)
+            print('old')
+        
+        # This didn't work because the json dump was outside of the loop so it never saved
+        # Works now
         except KeyError:
-            insults[category] = [punchline]
-            print(insults)
+            insults[category] = []
+            insults[category].append(punchline)
 
-
-with open("joke_reader_output.json", "w") as file:
-    json.dump(insults, file, indent=4)
-    file.close()
+        with open("mom insulter/joke_reader_output.json", "w") as file:
+            json.dump(insults, file, indent=4)
+            file.close()
