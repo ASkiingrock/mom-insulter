@@ -36,6 +36,7 @@ for line in lines:
             json.dump(insults, file, indent=4)
             file.close()
 
+#find all categories
 def keys():
     with open("mom insulter/joke-reading/joke_reader_output.json", "r", encoding="utf-8") as file:
         categories = json.load(file)
