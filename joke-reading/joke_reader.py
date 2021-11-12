@@ -36,9 +36,6 @@ for line in lines:
             file.close()
 
 
-# find all categories
-def keys():
-    with open("../insults.json", "r", encoding="utf-8") as file:
-        categories = json.load(file)
-        print(categories.keys())
-        categories.close()
+
+
+            
