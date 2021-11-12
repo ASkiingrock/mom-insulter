@@ -1,3 +1,4 @@
+import json
 # find all categories
 def keys():
     with open("/Users/owensmith/Documents/VS Code/mom-insulter/insults.json", "r", encoding="utf-8") as file:
