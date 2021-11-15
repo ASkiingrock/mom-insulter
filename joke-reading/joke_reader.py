@@ -7,12 +7,11 @@ with open("joke-reading/raw_jokes.txt", "r", encoding="utf-8") as file:
 with open("insults.json", "r", encoding="utf-8") as file:
     length = 0
     for line in file:
-        length+=1
-
+        length += 1
 
 for line in lines:
     # edit this based on format of text (e.g. starts with yo mama or yo mama's or yo mammy) or else it won't do anything
-    if "Yo Mama" not in line:  # Remove if you mama isn't in the joke
+    if "yo mama" not in line.lower():  # Remove if you mama isn't in the joke
         lines.remove(line)
     else:
         # Splits up the joke into category and punchline
@@ -46,16 +45,10 @@ for line in lines:
         except Exception as e:
             print(f"\"{line}\" not correct format ({e})")
             continue
+
 with open("insults.json", "r", encoding="utf-8") as file:
-    nlength = 0
+    new_length = 0
     for line in file:
-        nlength+=1
-    print(f'{nlength - length} lines were added')
+        new_length += 1
+    print(f'{new_length - length} lines were added')
     file.close()
-                
-        
-
-
-
-
-            

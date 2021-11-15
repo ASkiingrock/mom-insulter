@@ -1,14 +1,17 @@
 import json
+
+
 # find all categories
 def keys():
-    with open("/Users/owensmith/Documents/VS Code/mom-insulter/insults.json", "r", encoding="utf-8") as file:
+    with open("insults.json", "r", encoding="utf-8") as file:
         json_object = json.load(file)
-        keys = json_object.keys()
+        joke_categories = json_object.keys()
         values = []
-        for item in keys:
+        for item in joke_categories:
             values.append(len(json_object[item]))
-        keysvalues = sorted(zip(values,keys))
-        print(keysvalues)
+        keys_values = sorted(zip(values, joke_categories))
+        print(keys_values)
 
-#comment this out depending on whether you want to see the keys
+
+# comment this out depending on whether you want to see the keys
 keys()
