@@ -1,3 +1,5 @@
 .vscode/launch.json
 __pycache__/classes.cpython-310.pyc
 .idea
+.vscode
+__pycache__

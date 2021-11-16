@@ -11,7 +11,7 @@ class Trait:
 # Mum class, contains all the properties of a mother you could make hilarious jokes about
 # Will need to add to in future
 class Mum:
-    def __init__(self, name, age, height_m, weight_kg, iq, attractiveness, scariness, nationality):
+    def __init__(self, name, age, height_m, weight_kg, iq, attractiveness, scariness, nationality, yearly_income):
         self.name = name  # Name
         self.age = age  # Age
         self.height_m = height_m  # Height in metres
@@ -20,6 +20,7 @@ class Mum:
         self.attractiveness = attractiveness  # Attractiveness out of 10
         self.scariness = scariness  # Scariness out of 10
         self.nationality = nationality  # Nationality
+        self.yearly_income = yearly_income # Yearly income $
 
         self.bmi = self.weight_kg / (self.height_m ** 2)  # BMI score
 
@@ -40,6 +41,10 @@ class Mum:
             self.traits.append(scary)
         if self.nationality.lower() in ["american", "united states", "united states of america", "usa", "us"]:
             self.traits.append(american)
+        if self.yearlyincome() <= 60000:
+            self.traits.append(poor)
+        if self.yearlyincome() >= 330000:
+            self.traits.append(rich)
 
     # Insult function, pretty self-explanatory
     # Start with name to give context for who it is, maybe print stats?
@@ -62,6 +67,10 @@ class Mum:
             print("Yo mama so scary,", random.choice(insults["scary"]))
         if american in self.traits:
             print("Yo mama so American,", random.choice(insults["american"]))
+        if poor in self.traits:
+            print("Yo mama so poor,", random.choice(insults["poor"]))
+        if rich in self.traits:
+            print("Yo mama so rich,", random.choice(insults["rich"]))
 
     # Fact function, not sure why this exists but Owen made it
     # Gotta explain why she is getting roasted so hard OSCAR
@@ -95,3 +104,5 @@ stupid = Trait("stupid")
 ugly = Trait("ugly")
 scary = Trait("scary")
 american = Trait("american")
+poor = Trait("poor")
+rich = Trait("rich")
