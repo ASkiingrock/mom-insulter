@@ -59,9 +59,12 @@ class Mum:
         if short in self.traits:
             print("Yo mama so short,", random.choice(insults["short"]))
         if fat in self.traits:
-            print("Yo mama so fat,", random.choice(insults["fat"]))
+            print("Yo mama so fat,", random.choice(insults["fat"])) 
         if stupid in self.traits:
-            print("Yo mama so stupid,", random.choice(insults["stupid"]))
+            if random.randint(1,2) == 1:
+                print("Yo mama so stupid,", random.choice(insults["stupid"]))
+            else:
+                print("Yo mama so dumb,", random.choice(insults["dumb"]))
         if ugly in self.traits:
             print("Yo mama so ugly,", random.choice(insults["ugly"]))
         if scary in self.traits:
@@ -108,6 +111,7 @@ class Mum:
         print(f'\nYo mama\'s name is {self.name}\n')
         self.fact()
         self.insult()
+
 
 
 
