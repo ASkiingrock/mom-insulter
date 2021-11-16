@@ -1,11 +1,11 @@
 {
   "name": "Christine",
-  "age": 21,
-  "height_m": 1300,
-  "weight_kg": 10,
-  "iq": 8000,
-  "attractiveness": 590909090,
-  "scariness": 8000000000000000,
+  "age": 75,
+  "height_m": 130,
+  "weight_kg": 100,
+  "iq": 70,
+  "attractiveness": 4,
+  "scariness": 8,
   "nationality": "French",
   "yearly_income": 50000
 }

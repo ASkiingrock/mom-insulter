@@ -8,6 +8,4 @@ mom = classes.Mum(test_mum["name"], test_mum["age"], test_mum["height_m"], test_
                   test_mum["attractiveness"], test_mum["scariness"], test_mum["nationality"], test_mum["yearly_income"])
 
 # Testing funcs
-mom.insult()
-print("\n")
-mom.fact()
+mom.both()

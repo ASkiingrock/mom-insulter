@@ -41,17 +41,18 @@ class Mum:
             self.traits.append(scary)
         if self.nationality.lower() in ["american", "united states", "united states of america", "usa", "us"]:
             self.traits.append(american)
-        if self.yearlyincome() <= 60000:
+        if self.yearly_income <= 60000:
             self.traits.append(poor)
-        if self.yearlyincome() >= 330000:
+        if self.yearly_income >= 330000:
             self.traits.append(rich)
+        if self.nationality.lower() in ["french", "france"]:
+            self.traits.append(french)
 
     # Insult function, pretty self-explanatory
     # Start with name to give context for who it is, maybe print stats?
     def insult(self):
         with open("insults.json", "r", encoding="utf-8") as file:  # Load insults json file
             insults = json.load(file)
-        print(f'Yo mama\'s name is {self.name}')
         # Make random joke based on what traits are present
         if old in self.traits:
             print("Yo mama so old,", random.choice(insults["old"]))
@@ -71,16 +72,17 @@ class Mum:
             print("Yo mama so poor,", random.choice(insults["poor"]))
         if rich in self.traits:
             print("Yo mama so rich,", random.choice(insults["rich"]))
+        print("\n")
 
     # Fact function, not sure why this exists but Owen made it
     # Gotta explain why she is getting roasted so hard OSCAR
     # You know what? Makes sense
     def fact(self):
-        if self.age > 60:
+        if old in self.traits:
             print(f'Yo mama is {self.age}, which is over 60, therefore: she old.')
-        if self.height_m < 1.55:
+        if short in self.traits:
             print(f"Yo mama is {self.height_m}, which is fairly under the average of 1.62m")
-        if self.bmi > 25:
+        if fat in self.traits:
             print(f"Yo mama has a bmi of {self.bmi:.2f}, which classifies her as overweight or obese.")
         if self.iq < 85:
             if self.iq < 50:
@@ -92,9 +94,21 @@ class Mum:
             else:
                 print(f"Yo mama has an iq of {self.iq}, which is fairly below the average of 100 and classifies her "
                       f"as mentally impaired.")
-                
-        if self.attractiveness < 5:
+        if ugly in self.traits:
             print(f"Yo mama is a {self.attractiveness} out of 10. She ugly.")
+        if scary in self.traits:
+            print(f"Yo mama is {self.scariness} out of 10 scary. She scary.")
+        if poor in self.traits:
+            print(f"Yo mama has a yearly income of ${self.yearly_income}, this is less that $60,000 - defined as poor by the Australian governent.")
+        if rich in self.traits:
+            print(f"Yo mama's income is above $330,000, which places her in the top 20% richest households in Australia.")
+        print("\n")
+    
+    def both(self):
+        print(f'\nYo mama\'s name is {self.name}\n')
+        self.fact()
+        self.insult()
+
 
 
 old = Trait("old")
@@ -106,3 +120,4 @@ scary = Trait("scary")
 american = Trait("american")
 poor = Trait("poor")
 rich = Trait("rich")
+french = Trait("french")
