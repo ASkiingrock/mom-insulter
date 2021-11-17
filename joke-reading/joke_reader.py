@@ -11,13 +11,13 @@ with open("insults.json", "r", encoding="utf-8") as file:
 
 for line in lines:
     # edit this based on format of text (e.g. starts with yo mama or yo mama's or yo mammy) or else it won't do anything
-    if "yo mama" not in line.lower():  # Remove if you mama isn't in the joke
+    if "yo momma" not in line.lower():  # Remove if you mama isn't in the joke
         lines.remove(line)
     else:
         # Splits up the joke into category and punchline
         try:
             # may need to change depending on format
-            split_yo_mama = line.split("Yo Mama so ")
+            split_yo_mama = line.lower().split("yo momma so ")
             # returns errors if phrase is not in
             split_joke = split_yo_mama[1].split(", ", 1)
             category = split_joke[0].lower()  # e.g. fat, ugly, old, short
