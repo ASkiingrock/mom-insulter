@@ -14,7 +14,7 @@ with open("insults.json", "r") as f:
     category = random.choice(entry_list)
     punchline = random.choice(insultsjson[category])
     
-random_insult = (f"Yo mama so {category}, {punchline}.")
+random_insult = (f"Yo mama so {category}, {punchline}")
 
 # Testing funcs
 choice = input("\nWould you like a personalised insult, or a random one? (p or r)\n>> ")
