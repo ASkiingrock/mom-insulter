@@ -22,9 +22,16 @@
         "she put lipstick on her forehead to make up her mind.",
         "she went to the eye doctor to get an iPhone.",
         "she went to the dentist to get a Bluetooth.. which actually makes a lot of sense and is a reasonable line of thinking for someone who grew up without a smartphone.",
-        "when I said, “Drinks on the house,” she got a ladder.. which actually demonstrates her sense of humor and commitment to a good time."
+        "when I said, “Drinks on the house,” she got a ladder.. which actually demonstrates her sense of humor and commitment to a good time.",
+        "when they said it was chilly outside, she grabbed a bowl.",
+        "when thieves broke into her house and stole the tv, she chased after them shouting \"Wait, you forgot the remote!\""
     ],
     "fat": [
+        "her belt size is \"equator.\"",
+        "when she tripped over on 4th ave she landed on 12th.",
+        "when she sits around the house she sits around the house!",
+        "that when she hauls ass she has to make two trips!",
+        "when she goes to an all-you-can-eat buffet they have to install speed bumps.",
         "when she fell I didn't laugh, but the sidewalk cracked up.",
         "when she skips a meal, the stock market drops.",
         "it took me two buses and a train to get to her good side.",
@@ -125,6 +132,7 @@
         "she went to see Santa and he told her to get back to work."
     ],
     "ugly": [
+        "when she walks into a bank they turn off the cameras.",
         "she makes blind children cry.",
         "that when she tried to join a ugly contest they said: \"Sorry, no professionals\".",
         "your grandma had to be drunk to breastfeed her.",
@@ -348,9 +356,6 @@
         "when I jumped in a puddle, she said, “What are you doing in my bathtub?!”",
         "she eats cereal with a fork to save milk, among many other incredibly resourceful techniques to support her family through tough economic times. In fact, she’s so good at stretching a dollar, I bet you didn’t even know your family was poor, did you?"
     ],
-    "big": [
-        "her belt size is \"equator.\""
-    ],
     "bald": [
         "even a wig wouldn’t help!",
         "you can see whats on her mind",
@@ -370,13 +375,13 @@
     "big-footed": [
         "her shoes have to have license plates!"
     ],
-    "stupid when they said it was chilly outside": [
-        "she grabbed a bowl."
-    ],
-    "stupid when thieves broke into her house and stole the tv": [
-        "she chased after them shouting \"Wait, you forgot the remote!\""
-    ],
     "dumb": [
+        "it takes her an hour to cook minute rice.",
+        "she cooked her own complimentary breakfast.",
+        "she got fired from the m & m factory for throwing away all the w's.",
+        "she sold the house to pay the mortgage!",
+        "she sent me a fax with a stamp on it!",
+        "they had to burn down the school to get her out of second grade.",
         "she went to the eye doctor to get an iPhone.",
         "she put a watch in a piggybank and said she was saving time.",
         "she went to the library to find Facebook.",
@@ -422,31 +427,5 @@
     "french": [
         "she wears a white t-shirt for convenience of raising a white flag when she needs to.",
         "she plays baseball with a buguette."
-    ],
-    "dumb,": [
-        "it takes her an hour to cook minute rice.",
-        "she cooked her own complimentary breakfast.",
-        "she got fired from the m & m factory for throwing away all the w's.",
-        "she sold the house to pay the mortgage!",
-        "she sent me a fax with a stamp on it!",
-        "they had to burn down the school to get her out of second grade."
-    ],
-    "ugly when she joined an ugly contest": [
-        "they said, \"sorry, no professionals.\""
-    ],
-    "ugly when she walks into a bank": [
-        "they turn off the cameras."
-    ],
-    "fat when she goes to an all-you-can-eat buffet": [
-        "they have to install speed bumps."
-    ],
-    "fat that when she hauls ass": [
-        "she has to make two trips!"
-    ],
-    "fat when she sits around the house": [
-        "she sits around the house!"
-    ],
-    "fat when she tripped over on 4th ave": [
-        "she landed on 12th."
     ]
 }
