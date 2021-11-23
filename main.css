@@ -1,3 +1,4 @@
+body {background-color: #189aa5;}
 h1 {
     font-size: 44px;
     font-family: 'Outfit';
@@ -13,7 +14,7 @@ h3 {
     font-family: 'Outfit';
     text-align: center;
 }
-h3 {
+h4 {
     font-size: 24px;
     font-family: 'Outfit';
     text-align: center;
